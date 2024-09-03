@@ -9,7 +9,7 @@ docker network create pokemon_net 2>/dev/null
 # Construir imagenes
 docker build -t flask-api ./flask-api
 docker build -t pokemon-api ./PokemonApi
-docker build -t react-app ./pokemon-front
+docker build -t react-app ./pokemon-frontend
 
 # Correr contenedores
 docker run -d --name flask-container --net pokemon_net flask-api
