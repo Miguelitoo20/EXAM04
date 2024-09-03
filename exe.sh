@@ -12,8 +12,8 @@ docker build -t pokemon-api ./PokemonApi
 docker build -t react-app ./pokemon-front
 
 # Correr contenedores
-docker run -d --name flask-container --net pokemon_net -p 5000:5000 flask-api
-docker run -d --name pokemon-container --net pokemon_net -p 3000:3000 pokemon-api
+docker run -d --name flask-container --net pokemon_net flask-api
+docker run -d --name pokemon-container --net pokemon_net pokemon-api
 docker run -d --name react-container --net pokemon_net -p 80:80 react-app
 
 echo "Esperando a que los servicios estén listos..."
